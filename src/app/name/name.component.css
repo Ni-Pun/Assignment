@@ -13,3 +13,10 @@
     height: auto;
     /* border-radius: 30px; */
 }
+
+p{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:darkred
+    
+}

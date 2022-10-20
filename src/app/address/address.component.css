@@ -1,0 +1,22 @@
+.styling{
+    width: auto;
+    height: 100vh;
+    justify-content: center;
+    padding: auto;
+    display: flex;
+}
+
+.main-container{
+    /* background-color: burlywood; */
+    /* padding: auto;     */
+    width: 35rem;
+    height: auto;
+    /* border-radius: 30px; */
+}
+
+p{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:darkred
+    
+}
