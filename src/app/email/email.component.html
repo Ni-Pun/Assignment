@@ -1,0 +1,31 @@
+<!-- <p>email works!</p> -->
+
+<section class="container mt-4">
+    <!-- <h1>Reactive Form Example:</h1> -->
+    <form [formGroup]="form" (ngSubmit)="onNext()">
+        <!-- <p>
+            <label>First Name:</label>
+            <input type="text" formControlName="firstName">
+        </p> -->
+        <p>
+            <label>Email: </label>
+            <input type="text" formControlName="email">
+        </p>
+        <p>
+            <button class="btn btn-primary" type="button" routerLink="/create-user">Back</button>
+            <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Next</button>
+        </p>
+    </form>
+</section>
+
+<!-- <table>        
+    <tr>
+        <td>Email</td>
+        <td><input type="text" [(ngModel)]="emailAddress.email" #email /></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Back" routerLink="/create-user" /></td>
+        <td><input type="button" value="Next" routerLink="/create-user/phone" /></td>
+    </tr>
+</table> -->
+    

@@ -1,0 +1,32 @@
+<!-- <p>address works!</p> -->
+
+<section class="container mt-4">
+    <!-- <h1>Reactive Form Example:</h1> -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <!-- <p>
+            <label>First Name:</label>
+            <input type="text" formControlName="firstName">
+        </p> -->
+        <p>
+            <label>Address:</label>
+            <textarea formControlName="address"></textarea>
+        </p>
+        <p>
+            <button class="btn btn-primary" type="button" routerLink="/create-user/phone">Back</button>
+            <button class="btn btn-success" type="submit" [disabled]="!form.valid">Submit</button>
+        </p>
+    </form>
+</section>
+
+<!-- <form>
+<table>
+    <tr>
+        <td>Address</td>
+        <td><input type="text" [(ngModel)]="address.fulladdress" #fullAddress required/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Back" routerLink="/create-user/phone" /></td>
+        <td><input type="button" value="Finish" (click)="submit()" /></td>
+    </tr>
+</table>
+</form> -->

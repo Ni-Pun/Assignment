@@ -1,0 +1,43 @@
+<!-- <p>user-list works!</p> -->
+
+<div class="container ">
+    <div id="accordion">
+        <div class="card" *ngFor="let user of allUsersList; let i = index">
+          <div class="card-header" [class.active]="i === active_accordian_index" id="user_heading{{i}}">
+            <div class="row">
+                <div class="col-3">
+                    Name : <b>{{user.firstName}} {{user.lastName}} </b>
+                </div>
+                <div class="col-3">
+                    Email : <b>{{user.email}} </b>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-danger" (click)="deleteUser(i)">Delete</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-link" data-toggle="collapse" [attr.data-target]="'#user_collapse'+i" aria-expanded="true" [attr.aria-controls]="'user_collapse'+i" (click)="active_accordian_index = (i === active_accordian_index) ? -1 : i ">
+                      Details
+                    </button>
+                </div>
+            </div>
+            <!-- <h5 class="mb-0">
+            </h5> -->
+          </div>
+      
+          <div id="user_collapse{{i}}" class="collapse" [ngClass]="{show: (i === active_accordian_index)} " [attr.aria-labelledby]="'user_heading'+i" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        Phone no. : <b>{{user.phone}} </b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Address : <b>{{user.address}} </b>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
